@@ -1,40 +1,76 @@
-import React from 'react'
-import Nav from './Nav'
-import logo from '../assets/Logo.svg'
-
-const Footer = () => {
+import { Link } from "react-router-dom";
+export default function Footer() {
   return (
-    <footer className="footer">
-      <img src={logo} alt="little lemon logo" />
-      <nav aria-label="doormat nav" className="doormat-nav">
-        <h2>Doormat Nav</h2>
-        <ul>
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-          <li>Four</li>
-          <li>Five</li>
-          <li>Six</li>
-        </ul>
-      </nav>
-      <nav aria-label="contact nav" className="contact-nav">
-        <h2>Contact</h2>
-        <ul>
-          <li>Address</li>
-          <li>Phone</li>
-          <li>Email</li>
-        </ul>
-      </nav>
-      <nav aria-label="social nav" className="social-nav">
-        <h2>Social Media Links</h2>
-        <ul>
-          <li>Facebook</li>
-          <li>Twitter</li>
-          <li>Instagram</li>
-        </ul>
-      </nav>
-    </footer>
-  )
-}
+    <footer>
+      <menu>
+        <li className="img-footer">
+          <img
+            src={require("../assets/footer-logo.png")}
+            alt="Little Lemon logo"
+          ></img>
+        </li>
+        <li className="contact">
+          <h1 className="footer-header">Navigation</h1>
+          <ul className="footer-links">
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <a
+              href={require("../assets/menu.webp")}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Menu
+            </a>
+            <Link to="/reservations">Reservations</Link>
+            <Link to="/order">Order</Link>
+            <Link to="/login">Login</Link>
+          </ul>
+        </li>
 
-export default Footer
+        <li>
+          <h1 className="footer-header">Contact</h1>
+          <ul className="footer-links">
+            <li>2395 Maldove Way,</li>
+            <li>Chicago Illinois</li>
+            <br></br>
+            <li>(629)-243-6827</li>
+            <br></br>
+            <a
+              href="mailto: info@littlelemon.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              info@littlelemon.com
+            </a>
+          </ul>
+        </li>
+        <li>
+          <h1 className="footer-header">Connect</h1>
+          <ul className="footer-links">
+            <a
+              href="https://www.facebook.com/thelittlelemonshop/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Facebook
+            </a>
+            <a
+              href="https://www.instagram.com/littlelemonmoon/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=3Li-FfypZYE"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Join us!
+            </a>
+          </ul>
+        </li>
+      </menu>
+    </footer>
+  );
+}

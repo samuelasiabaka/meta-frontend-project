@@ -1,16 +1,15 @@
-import './App.css'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import Main from './components/Main'
-
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Routing from "./components/Routing";
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <Header />
-      <Main />
+      <Navbar />
+      <Routing />
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
